@@ -3,7 +3,10 @@
 This is a project I did during Insight Data Engineering program.
 
 ### What did I build?
-Providing meaningful metrics and improving metrics’ quality is significant for data engineers. But one of problems is s of our it is hard to manage them across the teams, and it is also hard to find out what metrics are available to use. So, I built a centralized metric service platform which can let user choose metrics,  filter conditions they want and show results and dashboards easily and fast. 
+Providing an approach which can balance query speed and flexibility of data models.
+Using Druid as the primary query enigne.The benefit of druid is it stores the data in memory, it revert indexed the data and it buckets the data by time so it is lighting fast.
+But it also comes with its limitation: the current version of druid doesn’t support join. 
+On my system, whenever join needed(people added new dimension which is not pre-aggregated), it will automatically switch to Presto as a fall back.
 
 ### Web App Link
 
